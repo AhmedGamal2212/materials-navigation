@@ -1,0 +1,9 @@
+.categoryHeader {
+    text-align: start;
+    border-bottom: cornflowerblue 1px solid;
+    width: 50%;
+}
+
+.categoryContainer {
+    padding: 2.5rem;
+}
