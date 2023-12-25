@@ -1,7 +1,7 @@
 .categoryHeader {
     text-align: start;
     border-bottom: cornflowerblue 1px solid;
-    width: 50%;
+    width: fit-content;
 }
 
 .categoryContainer {
