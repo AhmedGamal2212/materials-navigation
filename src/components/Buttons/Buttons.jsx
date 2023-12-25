@@ -5,11 +5,13 @@ const Buttons = ({sheets}) => {
 
     return (<>
         <section
-            className={`${styles.gridContainer} ${sheets.length === 1 ? ` ${styles.gridContainerSingle}` : sheets.length === 2 ? ` ${styles.gridContainerDouble}` : `${styles.gridContainerMoreThanTwo}`}`}
+            className={`${styles.gridContainer} ${sheets.length === 0 ? ` ${styles.gridContainerSingle}` : `${styles.gridContainerMoreThanTwo}`}`}
         >
-            {sheets.map(({gid, title}, index) => {
-                return <Button text={title} gid={gid} key={index}/>
-            })}
+            {(sheets.length && sheets.map(({gid, title}, index) => {
+                    return <Button text={title} gid={gid} key={index}/>
+                }))
+                || <p className={styles.noSheets}>No sheets found</p>
+            }
         </section>
     </>)
 }
