@@ -14,7 +14,7 @@ function App() {
 
     return (
         <div data-theme={isDark ? "dark" : "light"}>
-            <h1 className={`${styles.mainHeader} ${isDark ? '' : styles.mainHeaderLight}`}>Control Panel</h1>
+            <h1 className={`${styles.mainHeader} ${isDark ? '' : styles.mainHeaderLight}`}>Materials Dashboard</h1>
             <div className={styles.themeSwitcherWrapper}>
                 {!isDark ? "🌞" : "🌚"}
                 <input type={"checkbox"} role={"switch"} className={styles.themeSwitcher} onChange={() => handleTheme()}/>
