@@ -1,7 +1,7 @@
 import Button from '../Button/Button.jsx';
 import styles from './Buttons.module.css'
 
-const Buttons = ({sheets}) => {
+const Buttons = ({sheets, isDark}) => {
 
     return (<>
         <section
@@ -10,7 +10,9 @@ const Buttons = ({sheets}) => {
             {(sheets.length && sheets.map(({gid, title}, index) => {
                     return <Button text={title} gid={gid} key={index}/>
                 }))
-                || <p className={styles.noSheets}>No sheets found</p>
+                || <p className={styles.noSheets} style={{
+                    color: isDark ? "white" : "#5e35b1"
+                }}>No sheets found</p>
             }
         </section>
     </>)

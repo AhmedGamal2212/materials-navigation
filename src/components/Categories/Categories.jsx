@@ -14,7 +14,7 @@ const Categories = ({isDark}) => {
     });
 
     const buttonsByCategory = sheetsByCategory.map((sheets, index) => {
-        return <Buttons sheets={sheets} key={index}/>;
+        return <Buttons sheets={sheets} key={index} isDark={isDark}/>;
     });
 
     return (
