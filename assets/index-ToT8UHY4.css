@@ -1,1 +1,0 @@
-body{font-family:Roboto,sans-serif;padding:.5rem;text-align:center;width:100%}._gridContainer_alubp_1{display:grid;grid-template-columns:repeat(3,1fr);grid-gap:1rem;margin:1rem 0}@media screen and (max-width: 1024px){._gridContainer_alubp_1{grid-template-columns:repeat(2,1fr)}}@media screen and (max-width: 768px){._gridContainer_alubp_1{grid-template-columns:repeat(1,1fr)}}
