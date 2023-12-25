@@ -16,3 +16,9 @@
 .mainHeaderLight {
     color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+    .mainHeader {
+        font-size: 1.5rem;
+    }
+}
