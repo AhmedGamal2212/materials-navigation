@@ -1,6 +1,6 @@
 .categoryHeader {
     text-align: start;
-    border-bottom: cornflowerblue 1px solid;
+    border-bottom: #5e35b1 1px solid;
     width: fit-content;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .categoryHeaderLight {
-    color: steelblue;
+    color: rgba(94, 53, 177, .9);
 }
 
 .categoryContainer {
