@@ -2,7 +2,7 @@ import Buttons from '../Buttons/Buttons.jsx';
 import {priorityList, sheetDetails} from "../../data.js";
 import styles from './Categories.module.css';
 
-const Categories = () => {
+const Categories = ({isDark}) => {
     const sortedCategories = priorityList.sort((a, b) => {
         return a.priority - b.priority;
     });
@@ -22,7 +22,10 @@ const Categories = () => {
             {buttonsByCategory.map((buttons, index) => {
                 return (
                     <div key={index} className={styles.categoryContainer}>
-                        <h2 className={styles.categoryHeader}>{sortedCategories[index].category}</h2>
+                        <h2 className={
+                            `${styles.categoryHeader} 
+                             ${!isDark ? styles.categoryHeaderLight : styles.categoryHeaderDark}`
+                            }>{sortedCategories[index].category}</h2>
                         {buttons}
                     </div>
                 );

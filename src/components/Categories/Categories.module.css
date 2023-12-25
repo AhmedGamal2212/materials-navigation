@@ -4,6 +4,14 @@
     width: fit-content;
 }
 
+.categoryHeaderDark {
+    color: #fff;
+}
+
+.categoryHeaderLight {
+    color: steelblue;
+}
+
 .categoryContainer {
     padding: 2rem;
 }
