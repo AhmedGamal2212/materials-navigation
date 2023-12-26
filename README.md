@@ -47,10 +47,10 @@ To install and run this project, you need to have Node.js and npm installed on y
 
 ## Usage
 
-To use this project, you need to have a Google Sheet with your study materials organized into different tabs. Each tab should have a name and a link to the corresponding material. For example, you can have tabs like "Math", "Physics", "English", etc. with links to online courses, books, videos, etc. You can then use the sharable link of the Google Sheet without the gid of the spreadsheet and set it as the value of the  BASE_URL variable in the data.js file in the 'src' folder.
+To use this project, you need to have a Google Sheet with your study materials organized into different tabs. Each tab should have a name and a link to the corresponding material. For example, you can have tabs like "Math", "Physics", "English", etc. with links to online courses, books, videos, etc. You can then use the sharable link of the Google Sheet without the 'gid' of the spreadsheet and set it as the value of the 'BASE_URL' variable in the 'data.js' file in the 'src' folder.
 
-Additionally, you need to go to the data.js file in the 'src' folder and change the 'SHEET_DETAILS' with the gid for each tab taken from the url of the tab, title of the spreadsheet, and a category to group related tabs together.
-After that, you need to modify the PRIORITY_LIST to include all the categories you have, and the order you want them to appear in the dashboard. (Small numbers have higher priority and will appear first)
+Additionally, you need to go to the 'data.js' file in the 'src' folder and change the 'SHEET_DETAILS' with the 'gid' for each tab taken from the url of the tab, title of the spreadsheet, and a category to group related tabs together.
+After that, you need to modify the 'PRIORITY_LIST' to include all the categories you have, and the order you want them to appear in the dashboard. (Small numbers have higher priority and will appear first)
 
 ***Tip:*** You can use big gaps between the numbers to leave space for adding new categories later, or reordering the existing ones without having to change all the numbers.
 
