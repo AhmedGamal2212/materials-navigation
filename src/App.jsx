@@ -17,7 +17,8 @@ function App() {
             <h1 className={`${styles.mainHeader} ${isDark ? '' : styles.mainHeaderLight}`}>Materials Dashboard</h1>
             <div className={styles.themeSwitcherWrapper}>
                 {!isDark ? "🌞" : "🌚"}
-                <input type={"checkbox"} role={"switch"} className={styles.themeSwitcher} onChange={() => handleTheme()}/>
+                <input type={"checkbox"} role={"switch"} className={styles.themeSwitcher}
+                       onChange={() => handleTheme()}/>
             </div>
             <Categories isDark={isDark} />
         </div>

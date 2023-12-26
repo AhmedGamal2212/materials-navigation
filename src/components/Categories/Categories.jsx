@@ -1,6 +1,7 @@
 import Buttons from '../Buttons/Buttons.jsx';
-import {PRIORITY_LIST, SHEET_DETAILS} from "../../data.js";
+import {PRIORITY_LIST} from "../../data.js";
 import styles from './Categories.module.css';
+import data from "../../data.json";
 
 const Categories = ({isDark}) => {
     const sortedCategories = PRIORITY_LIST.sort((a, b) => {
@@ -8,7 +9,7 @@ const Categories = ({isDark}) => {
     });
 
     const sheetsByCategory = sortedCategories.map(({category}) => {
-        return SHEET_DETAILS.filter((sheet) => {
+        return data.filter((sheet) => {
             return sheet.category === category;
         })
     });
