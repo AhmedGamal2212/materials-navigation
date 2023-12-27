@@ -1,8 +1,10 @@
 const fs = require('fs');
+require('dotenv').config();
 
 async function getData() {
-    const SHEET_ID = '1ICHPadzQzzfnhUu7SuyUoQ8-D03WQh5SbAs0DAWxniE';
-    const url = `https://script.google.com/macros/s/AKfycbxQa_uBlo2JQ6xfl1VU1a64KYfYfwi0zRjlTJ9FCZDHq87SCECUKR5C9h3PwqFq8Uapkg/exec?id=${SHEET_ID}`;
+    const SHEET_ID = process.env.REACT_APP_SHEET_ID;
+    const SCRIPT_URL = process.env.REACT_APP_SCRIPT_URL;
+    const url = `${SCRIPT_URL}${SHEET_ID}`;
     const response = await fetch(url);
     return await response.json();
 }
