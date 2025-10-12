@@ -1,15 +1,26 @@
-import Buttons from '../Buttons/Buttons.jsx';
-import { PRIORITY_LIST } from '../../data.js';
+import Buttons from '../Buttons/Buttons';
+import { PRIORITY_LIST } from '../../data';
 import styles from './Categories.module.css';
 import data from '../../data.json';
+import { FC } from 'react';
 
-const Categories = ({ isDark }) => {
-    const sortedCategories = PRIORITY_LIST.sort((a, b) => {
+interface Sheet {
+    title: string;
+    category: string;
+    gid: number;
+}
+
+interface CategoriesProps {
+    isDark: boolean;
+}
+
+const Categories: FC<CategoriesProps> = ({ isDark }) => {
+    const sortedCategories = [...PRIORITY_LIST].sort((a, b) => {
         return a.priority - b.priority;
     });
 
-    const sheetsByCategory = sortedCategories.map(({ category }) => {
-        return data.filter((sheet) => {
+    const sheetsByCategory: Sheet[][] = sortedCategories.map(({ category }) => {
+        return data.filter((sheet: Sheet) => {
             return sheet.category === category;
         });
     });

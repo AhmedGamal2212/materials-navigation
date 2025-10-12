@@ -1,7 +1,19 @@
-import Button from '../Button/Button.jsx';
+import Button from '../Button/Button';
 import styles from './Buttons.module.css';
+import { FC } from 'react';
 
-const Buttons = ({ sheets, isDark }) => {
+interface Sheet {
+    title: string;
+    category: string;
+    gid: number;
+}
+
+interface ButtonsProps {
+    sheets: Sheet[];
+    isDark: boolean;
+}
+
+const Buttons: FC<ButtonsProps> = ({ sheets, isDark }) => {
     return (
         <>
             <section

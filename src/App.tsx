@@ -1,12 +1,12 @@
 import './App.css';
-import Categories from './components/Categories/Categories.jsx';
+import Categories from './components/Categories/Categories';
 import styles from './App.module.css';
 import { useState } from 'react';
 
 function App() {
-    const [isDark, setIsDark] = useState(true);
+    const [isDark, setIsDark] = useState<boolean>(true);
 
-    const handleTheme = () => {
+    const handleTheme = (): void => {
         const root = document.documentElement;
         root.dataset.theme = isDark ? 'light' : 'dark';
         setIsDark(!isDark);

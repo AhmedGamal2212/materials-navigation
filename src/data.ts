@@ -1,7 +1,7 @@
-export const BASE_URL =
+export const BASE_URL: string =
     'https://docs.google.com/spreadsheets/d/1ICHPadzQzzfnhUu7SuyUoQ8-D03WQh5SbAs0DAWxniE/edit#gid=';
 
-export const PRIORITY_LIST = [
+export const PRIORITY_LIST: { category: string; priority: number }[] = [
     { category: 'Computer Science', priority: 10 },
     { category: 'Software Engineering', priority: 20 },
     { category: 'Problem Solving', priority: 40 },
