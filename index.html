@@ -2,10 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <title>Materials Navigation</title>
+    <title>Vite + React + TS</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <script>
+      // Set theme from local storage or default
+      const primaryColor = localStorage.getItem("primaryColor") || "#3f51b5"; // Default to Indigo
+      const root = document.documentElement;
+      root.style.setProperty("--primary", primaryColor);
+      root.style.setProperty("--primary-hover", `${primaryColor}E6`);
+      root.style.setProperty("--primary-focus", `${primaryColor}40`);
+    </script>
   </head>
   <body>
     <div id="root"></div>

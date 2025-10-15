@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC, useState } from "react";
 import styles from "./Colors.module.css";
 
 const COLORS = [
@@ -15,38 +15,39 @@ const COLORS = [
 ];
 
 const Colors: FC = () => {
-  const setTheme = (color: string) => {
-    document.documentElement.style.setProperty("--primary", color);
-    document.documentElement.style.setProperty("--primary-hover", `${color}E6`);
-    document.documentElement.style.setProperty(
-      "--primary-focus",
-      `${color}40`
-    );
-  };
-
-  useEffect(() => {
-    const storedColor = localStorage.getItem("primaryColor");
-    if (storedColor) {
-      setTheme(storedColor);
-    }
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleColorChange = (color: string) => {
-    setTheme(color);
     localStorage.setItem("primaryColor", color);
+    const root = document.documentElement;
+    root.style.setProperty("--primary", color);
+    root.style.setProperty("--primary-hover", `${color}E6`);
+    root.style.setProperty("--primary-focus", `${color}40`);
+    setIsOpen(false);
   };
 
   return (
-    <div className={styles.colors}>
-      {COLORS.map(({ name, value }) => (
-        <button
-          key={name}
-          aria-label={name}
-          className={styles.color}
-          style={{ backgroundColor: value }}
-          onClick={() => handleColorChange(value)}
-        />
-      ))}
+    <div className={styles.container}>
+      <button
+        className={styles.toggleButton}
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle color picker"
+      >
+        🎨
+      </button>
+      {isOpen && (
+        <div className={styles.colors}>
+          {COLORS.map(({ name, value }) => (
+            <button
+              key={name}
+              aria-label={name}
+              className={styles.color}
+              style={{ backgroundColor: value }}
+              onClick={() => handleColorChange(value)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

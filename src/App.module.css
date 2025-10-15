@@ -1,5 +1,5 @@
 .mainHeader {
-    background-color: #5e35b1;
+    background-color: var(--primary);
     font-weight: 900;
 }
 
