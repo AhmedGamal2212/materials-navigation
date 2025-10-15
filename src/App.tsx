@@ -2,6 +2,7 @@ import './App.css';
 import Categories from './components/Categories/Categories';
 import styles from './App.module.css';
 import { useState } from 'react';
+import Colors from './components/Colors';
 
 function App() {
     const [isDark, setIsDark] = useState<boolean>(true);
@@ -29,6 +30,7 @@ function App() {
                     className={styles.themeSwitcher}
                     onChange={() => handleTheme()}
                 />
+                <Colors />
             </div>
             <Categories isDark={isDark} />
         </div>
