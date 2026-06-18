@@ -1,3 +1,7 @@
+body {
+    font-family: "Fira Sans", sans-serif;
+}
+
 /* Deep-purple Light scheme (Default) */
 /* Can be forced with data-theme="light" */
 [data-theme='light'],

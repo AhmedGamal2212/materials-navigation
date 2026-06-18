@@ -1,6 +1,10 @@
 .mainHeader {
     background-color: #5e35b1;
-    font-weight: 900;
+    font-weight: 700;
+    font-family: "Fira Sans", sans-serif;
+    letter-spacing: -0.5px;
+    padding: 1.5rem 2rem;
+    margin: 0;
 }
 
 .themeSwitcherWrapper {
